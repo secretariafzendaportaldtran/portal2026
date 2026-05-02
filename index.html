@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Sol - Despachante de Veículos em Salvador</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #ffc107;
+            --dark-color: #343a40;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color) !important;
+        }
+        
+        .navbar-brand img {
+            height: 40px;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.8)), url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        
+        .service-card {
+            transition: transform 0.3s;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .highlight {
+            background-color: var(--light-color);
+            padding: 80px 0;
+        }
+        
+        .contact-info i {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 30px 0;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-warning {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            color: var(--dark-color);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+        }
+        
+        .whatsapp-float a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            font-size: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-float a:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="fw-bold">CENTRAL SOL</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre Nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Seção Hero -->
+    <section class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">DESPACHANTE DE VEÍCULOS EM SALVADOR</h1>
+            <p class="lead mb-5">Agilidade e segurança para regularizar seu veículo sem sair de casa</p>
+            <a href="#contato" class="btn btn-warning btn-lg me-2"><i class="fas fa-phone-alt me-2"></i>FALE CONOSCO</a>
+            <a href="https://wa.me/557138780707" target="_blank" class="btn btn-success btn-lg"><i class="fab fa-whatsapp me-2"></i>WHATSAPP</a>
+        </div>
+    </section>
+
+    <!-- Seção Serviços -->
+    <section id="servicos" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">NOSSOS SERVIÇOS</h2>
+                <p class="lead text-muted">Conheça todos os serviços que oferecemos para você</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card card p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Licenciamento</h3>
+                        <p>Regularização anual do seu veículo junto ao Detran, garantindo que esteja em dia com as obrigações fiscais.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="service-card card p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Transferência</h3>
+                        <p>Processo de mudança de propriedade do veículo, assegurando que todas as documentações estejam corretas.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="service-card card p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-key"></i>
+                        </div>
+                        <h3>Financiamento</h3>
+                        <p>Regularização de veículos financiados, incluindo averbação e liberação de gravames.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="service-card card p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <h3>2ª Via de Documentos</h3>
+                        <p>Emissão de segunda via do CRV, CRLV e outros documentos veiculares em caso de perda ou roubo.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="service-card card p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-truck-pickup"></i>
+                        </div>
+                        <h3>Mudança de Características</h3>
+                        <p>Alteração de cor, mudança de categoria, inclusão de blindagem e outras modificações no registro.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="service-card card p-4 text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-undo-alt"></i>
+                        </div>
+                        <h3>Processos Administrativos</h3>
+                        <p>Recursos, defesas e acompanhamento de processos junto aos órgãos de trânsito.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Destaque -->
+    <section class="highlight">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-4">POR QUE ESCOLHER A CENTRAL SOL?</h2>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Agilidade:</strong> Resolvemos seu problema no menor tempo possível</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Segurança:</strong> Todos os processos são acompanhados por especialistas</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Comodidade:</strong> Atendimento personalizado sem você sair de casa</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Transparência:</strong> Sem custos ou taxas escondidas</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-primary me-2"></i> <strong>Experiência:</strong> Mais de 10 anos no mercado de despachante</li>
+                    </ul>
+                    <a href="#contato" class="btn btn-primary btn-lg mt-3">SOLICITE UM ORÇAMENTO</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1589459061861-3a74a2d03c39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Documentos de veículo" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre -->
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Sobre a Central Sol" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="fw-bold mb-4">SOBRE NÓS</h2>
+                    <p>A <strong>Central Sol</strong> é uma empresa especializada em despachante de veículos, comprometida em oferecer soluções ágeis e seguras para todos os processos de documentação automotiva.</p>
+                    <p>Com sede em Salvador, Bahia, atuamos há anos no mercado, ajudando milhares de clientes a regularizar seus veículos sem complicações.</p>
+                    <p>Nossa equipe é formada por profissionais experientes e capacitados, que acompanham todas as mudanças na legislação de trânsito para oferecer sempre o melhor serviço.</p>
+                    
+                    <div class="mt-4">
+                        <h5 class="fw-bold">Informações Cadastrais:</h5>
+                        <p><strong>Razão Social:</strong> CSO - Central de Servicos Online S.A.</p>
+                        <p><strong>CNPJ:</strong> 04.203.891/0001-34</p>
+                        <p><strong>Data Situação Cadastral:</strong> 23/06/2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+    <section id="contato" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">FALE CONOSCO</h2>
+                <p class="lead text-muted">Entre em contato para tirar suas dúvidas ou solicitar um orçamento</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="contact-info mb-4">
+                        <h4 class="fw-bold mb-4"><i class="fas fa-map-marker-alt"></i> ENDEREÇO</h4>
+                        <p>Alameda Salvador, 1057<br>
+                        Caminho das Árvores<br>
+                        Salvador - BA<br>
+                        CEP: 41820-790</p>
+                    </div>
+                    
+                    <div class="contact-info mb-4">
+                        <h4 class="fw-bold mb-4"><i class="fas fa-phone-alt"></i> TELEFONE</h4>
+                        <p>(71) 3878-0707</p>
+                    </div>
+                    
+                    <div class="contact-info mb-4">
+                        <h4 class="fw-bold mb-4"><i class="fas fa-envelope"></i> E-MAIL</h4>
+                        <p>contato@centralsol.com.br</p>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h4 class="fw-bold mb-4"><i class="fas fa-clock"></i> HORÁRIO DE FUNCIONAMENTO</h4>
+                        <p>Segunda a Sexta: 08:00 às 18:00<br>
+                        Sábado: 08:00 às 12:00</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card p-4 shadow">
+                        <h4 class="fw-bold mb-4">ENVIE UMA MENSAGEM</h4>
+                        <form>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Seu nome" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Seu e-mail" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="tel" class="form-control" placeholder="Seu telefone" required>
+                            </div>
+                            <div class="mb-3">
+                                <select class="form-select">
+                                    <option selected>Selecione o serviço</option>
+                                    <option>Licenciamento</option>
+                                    <option>Transferência</option>
+                                    <option>Financiamento</option>
+                                    <option>2ª Via de Documentos</option>
+                                    <option>Mudança de Características</option>
+                                    <option>Processos Administrativos</option>
+                                    <option>Outro</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <textarea class="form-control" rows="5" placeholder="Sua mensagem"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">ENVIAR MENSAGEM</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <div class="container-fluid p-0">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.999999999999!2d-38.460999999999995!3d-12.971999999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzE5LjIiUyAzOMKwMjcnNDMuNiJX!5e0!3m2!1sen!2sbr!4v1620000000000!5m2!1sen!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold">CENTRAL SOL</h5>
+                    <p>Despachante de veículos em Salvador, Bahia. Agilidade e segurança para regularizar seu veículo.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="fw-bold">LINKS RÁPIDOS</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#servicos" class="text-white">Serviços</a></li>
+                        <li><a href="#sobre" class="text-white">Sobre Nós</a></li>
+                        <li><a href="#contato" class="text-white">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold">REDES SOCIAIS</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="mb-0">&copy; 2023 Central Sol - Todos os direitos reservados</p>
+                    <p class="mb-0">CSO - Central de Servicos Online S.A. - CNPJ: 04.203.891/0001-34</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão do WhatsApp -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/557138780707" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
